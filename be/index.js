@@ -10,6 +10,10 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Backend is running successfully!');
+});
+
 const modelsToTry = [
   { name: 'gemini-2.5-flash', version: 'v1beta' },
   { name: 'gemini-2.0-flash', version: 'v1beta' },
