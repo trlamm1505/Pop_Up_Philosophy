@@ -132,7 +132,8 @@ Yêu cầu về phản hồi: Trả lời khoa học, ngắn gọn, dễ hiểu,
         ]
       };
 
-      const res = await fetch('/api/chat', {
+      const apiBase = import.meta.env.VITE_API_URL || '';
+      const res = await fetch(`${apiBase}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
